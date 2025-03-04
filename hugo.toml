@@ -7,7 +7,7 @@ languageCode = 'en-us'
 
 [params]
 
-    showBlog = true
+    showBlog = tru
     mainSections = ['blog']
 
     [params.logo]
