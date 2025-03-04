@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="{{ if .Params.bg_class }}
+                    {{ .Params.bg_class }}
+                {{ else }}
+                  
+                {{ end }} min-h-screen">
+
+  <header class="{{ if .Params.text_class }} 
+                        {{ .Params.text_class }} 
+                  {{ else }} 
+                   
+                  {{ end }}">
+    {{ partial "header.html" . }}
+  </header>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="bg-gradient-to-b from-blue-500 to-blue-400 text-surface/75 dark:text-slate-100 lg:text-left">
+    {{ partial "footer.html" . }}
+  </footer>
+
+</body>
+
+</html>

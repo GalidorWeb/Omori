@@ -1,0 +1,23 @@
+{
+  "name": "omori",
+  "version": "1.0.0",
+  "description": "## Features",
+  "main": "index.js",
+ "scripts": {
+    "start": "concurrently npm:watch:*",
+    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
+    "watch:hugo": "hugo server",
+    "build": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css && hugo --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.8"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.8"
+  }
+}

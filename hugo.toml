@@ -1,0 +1,83 @@
+baseURL = 'https://galidorresearch.com.br/'
+title = "Galidor Research"
+author = "W Daniel Freitas"
+languageCode = 'en-us'
+
+
+
+[params]
+
+    showBlog = true
+    mainSections = ['blog']
+
+    [params.logo]
+    header = "img/logo/logo_galidor.svg"
+    footer = "img/logo/logomarca_galidor.svg"
+    alt = "logo_empresa"
+
+    # The size parameter is the class name of tailwindcss
+    # https://tailwindcss.com/
+    size = "h-14"
+    size_footer = "h-24"
+
+
+    [params.fotos]
+    freitas = "img/logo/logo_galidor.svg"
+    dorneles = "img/logo/logo_galidor.svg"
+    alt = "fotos_equipe"
+
+
+[menu]
+
+    [[menu.main1]]
+      identifier = "products"
+      name = "Produtos"
+      url = "/products/"
+      weight = 10
+
+    [[menu.main2]]
+      identifier = "blog"
+      name = "Blog"
+      url = "/page_building/"
+      weight = 20
+
+    [[menu.main3]]
+      identifier = "about"
+      name = "Quem Somos"
+      url = "/about/"
+      weight = 30
+
+    [[menu.main4]]
+      identifier = "contact"
+      name = "Contato"
+      url = "/contact/"
+      weight = 40
+
+    [[menu.login]]
+      identifier = "login"
+      name = "Log in"
+      url = "/page_building/"
+      weight = 50
+
+    # Footer Menu
+    [[menu.footerblog]]
+      name = "Blog"
+      url = "/page_building/"
+      weight = 10
+
+    [[menu.footertrabalhe]]
+      name = "Trabalhe Conosco"
+      url = "/page_building/"
+      weight = 20
+
+    [[menu.footercloud]]
+      name = "Cloud"
+      url = "/page_building/"
+      weight = 30
+
+
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

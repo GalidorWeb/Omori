@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="{{ .Params.bg_class }} min-h-screen p-10">
+  <div class="mx-auto my-10 max-w-6xl">
+    <div class="mx-3 col-span-3 lg:col-span-2 px-2 pt-6">
+      <h1 class="text-center text-3xl tracking-tight sm:text-4xl font-bold {{ .Params.text_title_gradient }}">
+        {{.Title}}
+      </h1>
+      <div class="text-stone-100 text-center content prose md:prose-lg lg:prose-xl max-w-none py-1 mt-2">
+        {{.Content}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+{{ end }}
