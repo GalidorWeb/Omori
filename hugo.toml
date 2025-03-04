@@ -44,7 +44,7 @@ languageCode = 'en-us'
     [[menu.main3]]
       identifier = "about"
       name = "Quem Somos"
-      url = "/about/"
+      url = "/page_building/"
       weight = 30
 
     [[menu.main4]]
