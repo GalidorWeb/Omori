@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <meta property="og:url" content="https://www.galidorresearch.com.br"> -->
 <script src="https://cdn.tailwindcss.com"></script>
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }} 
+<title>{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
+<!-- <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title> -->
+<!-- {{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }} -->

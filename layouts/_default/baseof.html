@@ -12,21 +12,17 @@
                   
                 {{ end }} min-h-screen">
 
-  <header class="{{ if .Params.text_class }} 
-                        {{ .Params.text_class }} 
-                  {{ else }} 
-                   
-                  {{ end }}">
-    {{ partial "header.html" . }}
-  </header>
+
+  {{ partial "header.html" . }}
+
 
   <main>
     {{ block "main" . }}{{ end }}
   </main>
 
-  <footer class="bg-gradient-to-b from-blue-500 to-blue-400 text-surface/75 dark:text-slate-100 lg:text-left">
-    {{ partial "footer.html" . }}
-  </footer>
+
+  {{ partial "footer.html" . }}
+
 
 </body>
 

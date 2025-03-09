@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ or .Site.Language.Lang "ja" }}">
+<html lang="{{ or .Site.Language.Lang " ja" }}">
 
 <head>
     {{- partial "head.html" . -}}
-    
+
     <!-- <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
     <meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
     <meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
@@ -18,22 +18,21 @@
 <body>
 
     <div class="bg-gradient-to-b from-blue-500 to-green-500">
-        <header class="text-slate-100"> 
-            {{- partial "header.html" . -}}
-        </header>
+        {{- partial "header.html" . -}}
+
         {{- partial "hero_sections.html" . -}}
     </div>
- 
-    <main> 
-    {{- partial "strip.html" . -}}
-    {{- partial "whatmake.html" . -}}
+
+    <main>
+        {{- partial "strip.html" . -}}
+        {{- partial "whatmake.html" . -}}
     </main>
 
 
-    <footer class="bg-gradient-to-b from-blue-500 to-blue-400 text-surface/75 dark:text-slate-100 lg:text-left">
-        {{- partial "footer.html" . -}}
-    </footer>
-  
+
+    {{- partial "footer.html" . -}}
+
+
     <!-- <script src="{{ "/js/swiper-bundle.min.js" | relURL }}"></script>
     <script>
         var mySwiper = new Swiper(".swiper-container", {
@@ -55,6 +54,3 @@
 </body>
 
 </html>
-
-
-
