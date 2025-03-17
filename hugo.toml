@@ -29,6 +29,11 @@ languageCode = 'en-us'
 
 
 [menu]
+   
+    [[menu.main0]]
+      identifier = "home"
+      url = "/"
+      weight = 1
 
     [[menu.main1]]
       identifier = "products"

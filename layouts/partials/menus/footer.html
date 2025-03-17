@@ -69,10 +69,12 @@
     <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <!-- Logo no rodapé -->
       <div>
-        <a href="{{ .Site.BaseURL }}">
+        {{ range .Site.Menus.main0 }}
+        <a href="{{ .URL | safeURL }}">
           <img alt="{{ .Site.Params.logo.alt }}" class="{{ .Site.Params.logo.size_footer }} mx-auto"
             src="{{ .Site.Params.logo.footer | relURL }}">
         </a>
+        {{ end }}
       </div>
       <!-- Products section -->
       <!-- <div>
@@ -92,12 +94,12 @@
         </h6>
         <p class="mb-4 hover:underline">
           {{ range .Site.Menus.footerblog }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL | safeURL }}">{{ .Name }}</a>
           {{ end }}
         </p>
         <p class="mb-4 hover:underline">
           {{ range .Site.Menus.footertrabalhe }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL | safeURL }}">{{ .Name }}</a>
           {{ end }}
         </p>
         <p class="mb-4 hover:underline">
