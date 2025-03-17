@@ -1,4 +1,4 @@
-BaseURL = 'https://galidorresearch.com.br/'
+baseURL = "https://galidorresearch.com.br/"
 title = "Galidor Research"
 author = "W Daniel Freitas"
 languageCode = 'en-us'
