@@ -1,7 +1,6 @@
 +++
 layout = 'contact'
 title = 'Contato'
-type = 'miscellaneous'
 +++
 
 

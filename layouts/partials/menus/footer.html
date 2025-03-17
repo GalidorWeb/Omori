@@ -92,12 +92,12 @@
         </h6>
         <p class="mb-4 hover:underline">
           {{ range .Site.Menus.footerblog }}
-          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+          <a href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
         </p>
         <p class="mb-4 hover:underline">
           {{ range .Site.Menus.footertrabalhe }}
-          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+          <a href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
         </p>
         <p class="mb-4 hover:underline">
