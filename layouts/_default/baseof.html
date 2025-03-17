@@ -6,14 +6,26 @@
   {{ partial "head.html" . }}
 </head>
 
-<body class="{{ if .Params.bg_class }}
-                    {{ .Params.bg_class }}
-                {{ else }}
-                  
-                {{ end }} min-h-screen">
+<body>
 
+  {{ if .IsHome }}
+  <div class="bg-gradient-to-b from-blue-500 to-green-500">
+    <header>
+      {{- partial "menus/header.html" . -}}
+      {{- partial "menus/mobile-menu.html" . -}}
+    </header>
 
-  {{ partial "header.html" . }}
+    {{- partial "hero_sections.html" . -}}
+  </div>
+
+  {{ else }}
+
+  <header>
+    {{- partial "menus/header.html" . -}}
+    {{- partial "menus/mobile-menu.html" . -}}
+  </header>
+
+  {{ end }}
 
 
   <main>
@@ -21,7 +33,7 @@
   </main>
 
 
-  {{ partial "footer.html" . }}
+  {{ partial "menus/footer.html" . }}
 
 
 </body>
