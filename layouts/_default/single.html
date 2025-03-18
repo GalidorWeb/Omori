@@ -1,7 +1,11 @@
 {{ define "main" }}
-<div class="section-container">
-    <section class="section">
-        <article class="layout-single-default">{{ .Content }}</article>
-    </section>
-</div>
+
+<section class="text-center mt-20">
+    <h1 class="text-[26px] font-bold"> {{ .Title }} </h1>
+
+    <article>
+        <p class="text-[15px]"> {{ .Content }} </p>
+    </article>
+</section>
+
 {{ end }}

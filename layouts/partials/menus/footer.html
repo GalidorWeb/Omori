@@ -1,23 +1,4 @@
 <footer class="bg-gradient-to-b from-blue-500 to-blue-400 text-surface/75 dark:text-slate-100 lg:text-left">
-  <!-- {{ if not .IsHome }}
-  <script src='{{ "/js/clipboard.min.js" | relURL }}'></script>
-  <script src='{{ "/js/highlight.min.js" | relURL }}'></script>
-  <script src='{{ "/js/highlightjs-line-numbers.min.js" | relURL }}'></script>
-  <script src='{{ "/js/sweetalert2.min.js" | relURL }}'></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-    new ClipboardJS('.url');
-
-    function OnClickURL() {
-      Swal.fire({
-        icon: 'success',
-        title: 'Copied!',
-        text: 'Copied the URL and title.'
-      })
-    }
-  </script>
-  {{ end }} -->
   {{ $mainJS := resources.Get "js/main.js" | minify | fingerprint }}
   <script type="module">
     import { toggleMenu, closeMenu } from "{{ $mainJS.RelPermalink }}";

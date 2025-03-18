@@ -1,12 +1,11 @@
 +++
 layout = 'contact'
-title = 'Contato'
+title = 'Fale Conosco'
 +++
 
 
 
-Preencha seus dados abaixo.
-
+## **Preencha seus dados abaixo.**
 
 
 {{< form >}}

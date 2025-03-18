@@ -1,7 +1,7 @@
 baseURL = "https://galidorresearch.com.br/"
 title = "Galidor Research"
 author = "W Daniel Freitas"
-languageCode = 'en-us'
+languageCode = "en-us"
 
 
 
@@ -30,11 +30,6 @@ languageCode = 'en-us'
 
 [menu]
    
-    [[menu.main0]]
-      identifier = "home"
-      url = "/"
-      weight = 1
-
     [[menu.main1]]
       identifier = "products"
       name = "Produtos"
@@ -50,7 +45,7 @@ languageCode = 'en-us'
     [[menu.main3]]
       identifier = "about"
       name = "Quem Somos"
-      url = "/about"
+      url = "/about/"
       weight = 30
 
     [[menu.main4]]
@@ -81,9 +76,3 @@ languageCode = 'en-us'
       url = "/page_building/"
       weight = 30
 
-
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
