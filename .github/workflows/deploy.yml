@@ -15,10 +15,12 @@ jobs:
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
+    
+    - name: Replace GOOGLE_ANALYTICS_ID in hugo.toml
+      run: |
+        sed -i "s/GOOGLE_ANALYTICS_PLACEHOLDER/${{ secrets.GOOGLE_ANALYTICS_ID }}/g" hugo.toml
 
     - name: Build Hugo site
-      env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}  # Aqui você usa o GitHub Secret
       run: hugo
 
     - name: Deploy to GitHub Pages
@@ -26,6 +28,3 @@ jobs:
       with:
         personal_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
-    - name: Replace GOOGLE_ANALYTICS_ID in hugo.toml
-      run: |
-        sed -i "s/GOOGLE_ANALYTICS_PLACEHOLDER/${{ secrets.GOOGLE_ANALYTICS_ID }}/g" hugo.toml
