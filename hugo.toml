@@ -10,7 +10,7 @@ languageCode = "en-us"
 
 [params]
 
-    [params.googleAnalyticsID]
+    [params.googleAnalytics]
     id = "GOOGLE_ANALYTICS_ID"
     
     [params.logo]
