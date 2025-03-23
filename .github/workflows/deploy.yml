@@ -15,11 +15,18 @@ jobs:
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
-    
-     - name: Build Hugo site
-       env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-       run: hugo
+      
+    # Verifica se o arquivo hugo.toml existe e faz a substituição
+    - name: Check and Replace GOOGLE_ANALYTICS_ID in hugo.toml
+      run: |
+        if [ -f "./hugo.toml" ]; then 
+          sed -i "s/GOOGLE_ANALYTICS_PLACEHOLDER/${{ secrets.GOOGLE_ANALYTICS_ID }}/g" ./hugo.toml
+        else
+          echo "Arquivo hugo.toml não encontrado!"
+        fi
+
+    - name: Build Hugo site
+      run: hugo
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
