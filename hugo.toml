@@ -6,7 +6,7 @@ languageCode = "en-us"
 
 [services]
     [services.googleAnalytics]
-      id = "G-7EXDSLNSYZ"
+      id = "GOOGLE_ANALYTICS_ID"
 
 [params]
 
