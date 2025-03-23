@@ -5,6 +5,10 @@ languageCode = "en-us"
 
 
 
+[services]
+    [services.googleAnalytics]
+      id = 'G-7EXDSLNSYZ'
+
 [params]
 
     showBlog = true
