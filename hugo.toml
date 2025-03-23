@@ -6,13 +6,11 @@ languageCode = "en-us"
 
 [services]
     [services.googleAnalytics]
-      id = "GOOGLE_ANALYTICS_ID"
+      id = "$GOOGLE_ANALYTICS_ID"
 
 [params]
 
-    [params.googleAnalytics]
-    id = "GOOGLE_ANALYTICS_ID"
-    
+
     [params.logo]
     header = "img/logo/logo_galidor.svg"
     footer = "img/logo/logomarca_galidor.svg"

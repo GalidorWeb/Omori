@@ -13,13 +13,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Hugo
+    - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
-    
-     - name: Build Hugo site
-       env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-       run: hugo --minify --gc
+      with:
+        hugo-version: 'latest'
+
+      # 🔥 Etapa de debug para inspecionar variáveis de ambiente
+    - name: Debug - Verificar variáveis de ambiente
+      run: printenv
+
+    - name: Set up environment variables
+      run: echo "GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }}" >> $GITHUB_ENV
+
+    - name: Build site with environment variable
+      run: hugo --minify
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
