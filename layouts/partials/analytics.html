@@ -1,14 +1,13 @@
 {{ if not hugo.IsServer }}
-{{- $gaID := getenv "GOOGLE_ANALYTICS_ID" -}}
-{{- if $gaID -}}
+{{ with getenv "GOOGLE_ANALYTICS_ID" }}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaID }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
-  gtag('config', '{{ $gaID }}');
+  gtag('config', '{{ . }} }}');
 </script>
 {{ end }}
 {{ end }}
