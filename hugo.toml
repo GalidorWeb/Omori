@@ -4,10 +4,9 @@ author = "W Daniel Freitas"
 languageCode = "en-us"
 
 
-[security]
-  [security.funcs]
-    getenv = ['^HUGO_', '^CI$', '^USER$', '^HOME$', '^GOOGLE_ANALYTICS_ID$']
-
+[services]
+    [services.googleAnalytics]
+      id = "G-7EXDSLNSYZ"
 
 [params]
 
