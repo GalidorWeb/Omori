@@ -4,10 +4,6 @@ author = "W Daniel Freitas"
 languageCode = "en-us"
 
 
-[services]
-    [services.googleAnalytics]
-      id = "GOOGLE_ANALYTICS_ID"
-
 [params]
 
 

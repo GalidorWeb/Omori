@@ -3,7 +3,7 @@ name: Deploy Hugo Site
 on:
   push:
     branches:
-      - main  # Ou qualquer outra branch que você usa para deploy
+      - main  # Ou qualquer outra branch que você usa para o deploy
 
 jobs:
   build:
@@ -17,18 +17,16 @@ jobs:
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
-        extended: true
-        
-    - name: Criar hugo.toml dinamicamente
-      run: |
-        echo '[services]' > hugo.toml
-        echo '[services.googleAnalytics]' >> hugo.toml
-        echo "id = '${{ secrets.GOOGLE_ANALYTICS_ID }}'" >> hugo.toml
 
-    - name: Build Hugo site
-      env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}  # Passa o segredo para o build
-      run: hugo
+      # 🔥 Etapa de debug para inspecionar variáveis de ambiente
+    - name: Debug - Verificar variáveis de ambiente
+      run: printenv
+
+    - name: Set up environment variables
+      run: echo "GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }}" >> $GITHUB_ENV
+
+    - name: Build site with environment variable
+      run: hugo --minify
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
