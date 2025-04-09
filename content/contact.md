@@ -1,4 +1,4 @@
-+++
+<!-- +++
 layout = 'contact'
 title = 'Fale Conosco'
 +++
@@ -8,4 +8,4 @@ title = 'Fale Conosco'
 ## **Preencha seus dados abaixo.**
 
 
-{{< form >}}
+{{< form >}} -->

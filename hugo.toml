@@ -49,11 +49,6 @@ languageCode = "en-us"
       url = "/about/"
       weight = 30
 
-    [[menu.main4]]
-      identifier = "contact"
-      name = "Contato"
-      url = "/contact/"
-      weight = 40
 
     [[menu.login]]
       identifier = "login"
