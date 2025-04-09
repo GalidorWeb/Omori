@@ -1,4 +1,10 @@
 <footer class="bg-gradient-to-b from-blue-500 to-blue-400 text-surface/75 dark:text-slate-100 lg:text-left">
+
+
+
+  {{- partial "widgets/atendimento.html" . -}}
+
+
   {{ $mainJS := resources.Get "js/main.js" | minify | fingerprint }}
   <script type="module">
     import { toggleMenu, closeMenu } from "{{ $mainJS.RelPermalink }}";
