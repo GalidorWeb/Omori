@@ -3,7 +3,9 @@
   dir="{{ or site.Language.LanguageDirection `ltr` }}">
 
 <head>
-  {{ partial "head.html" . }}
+
+  {{ partial "seo/head.html" . }}
+  {{ partialCached "css.html" . }}
 </head>
 
 <body>
